@@ -11,6 +11,8 @@ import ForgotPass from './components/features/Forgetpass'
 import AuthProvider from './components/context/AuthProvider'
 import CourseDetails from './components/pages/CourseDetails'
 import AllCourse from './components/AllCourse'
+import MyCourse from './components/pages/MyCourse'
+import MyEnrolledCourses from './components/pages/MyEnrolledCourses'
 
 
 
@@ -43,7 +45,16 @@ const router = createBrowserRouter([
         path:'/courseDetails/:id',
         loader: ({params}) => fetch(`http://localhost:3000/courses/${params.id}`),
         Component: CourseDetails
-      }
+      },
+      {
+        path:'/myCourse',
+        element: <MyCourse></MyCourse>
+      },
+      {
+        path: '/myEnrolledCourse',
+        element: <MyEnrolledCourses></MyEnrolledCourses>
+      },
+      
     ]
   }
 ])

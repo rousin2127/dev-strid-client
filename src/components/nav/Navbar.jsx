@@ -23,6 +23,9 @@ const Navbar = () => {
     const links = <>
         <li ><NavLink to={'/'}>Home</NavLink></li>
         <li ><NavLink to={'/allCourses'}>All Courses</NavLink></li>
+        <li ><NavLink to={'/myCourse'}>My Course</NavLink></li>
+        <li ><NavLink to={'/myEnrolledCourse'}>Enrolled Course</NavLink></li>
+        <li ><NavLink to={'/addCourse'}>Add Course</NavLink></li>
 
     </>
 
