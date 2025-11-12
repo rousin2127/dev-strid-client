@@ -9,6 +9,8 @@ import Signup from './components/features/Signup'
 import Login from './components/features/Login'
 import ForgotPass from './components/features/Forgetpass'
 import AuthProvider from './components/context/AuthProvider'
+import CourseDetails from './components/pages/CourseDetails'
+import AllCourse from './components/AllCourse'
 
 
 
@@ -32,6 +34,15 @@ const router = createBrowserRouter([
       {
         path: '/forget-password',
         element: <ForgotPass></ForgotPass>
+      },
+      {
+        path: '/allCourses',
+        Component: AllCourse
+      },
+      {
+        path:'/courseDetails/:id',
+        loader: ({params}) => fetch(`http://localhost:3000/courses/${params.id}`),
+        Component: CourseDetails
       }
     ]
   }
