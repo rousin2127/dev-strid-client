@@ -59,7 +59,7 @@ const Navbar = () => {
                                 <Link to="/profile">
                                     {user.photoURL ? (
                                         <img
-                                            src={user.photoURL}
+                                            src={user.photoURL || photoURL}
                                             alt="User"
                                             className="w-10 h-10 rounded-full border-2 border-gray-400 hover:scale-105 transition"
                                         />

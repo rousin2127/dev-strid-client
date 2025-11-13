@@ -1,7 +1,6 @@
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
-
 import { updateProfile } from 'firebase/auth';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
@@ -54,12 +53,33 @@ const Signup = () => {
                     displayName: name,
                     photoURL: photo
                 }
-                updateProfile(result.user, profile)
+               updateProfile(result.user, profile)
                     .then(() => {
+                        // user update in db
+                        const newUser = {
+                            name: name,
+                            email: email,
+                            image: photo 
+                        }
 
+                        fetch('http://localhost:3000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(newUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                               // console.log('data after manual user save', data)
+                            })
+                            .catch(fetchError => {
+                                //console.error('Database save error:', fetchError);
+                               
+                            })
                     })
                     .catch(error => {
-
+                        //console.error('Firebase profile update error:', error);
                     })
                 event.target.reset()
                 navigate('/')
@@ -67,7 +87,6 @@ const Signup = () => {
 
             })
             .catch(error => {
-                // console.log(error);
                 setError(error.message)
 
             })
@@ -91,7 +110,7 @@ const Signup = () => {
                 })
                 .then(res => res.json())
                 .then(data =>{
-                    console.log('data after user save',data)
+                    //console.log('data after user save',data)
                 })
                 navigate('/')
 
