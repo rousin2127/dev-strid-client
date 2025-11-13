@@ -13,6 +13,8 @@ import CourseDetails from './components/pages/CourseDetails'
 import AllCourse from './components/AllCourse'
 import MyCourse from './components/pages/MyCourse'
 import MyEnrolledCourses from './components/pages/MyEnrolledCourses'
+import AddCourse from './components/pages/AddCourse'
+import UpdateCourse from './components/pages/UpdateCourse'
 
 
 
@@ -54,7 +56,14 @@ const router = createBrowserRouter([
         path: '/myEnrolledCourse',
         element: <MyEnrolledCourses></MyEnrolledCourses>
       },
-      
+      {
+        path: '/addCourse',
+        element: <AddCourse></AddCourse>
+      },
+      {
+        path: '/updateCourse/:id',
+        element: <UpdateCourse></UpdateCourse>
+      }
     ]
   }
 ])
