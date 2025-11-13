@@ -9,7 +9,7 @@ const AllCourse = () => {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Fetch courses from backend
+  // fetch course from db
   useEffect(() => {
     setLoading(true);
     axios.get('http://localhost:3000/courses')
@@ -24,10 +24,10 @@ const AllCourse = () => {
       });
   }, []);
 
-  // Get unique categories
+  
   const categories = ['All', ...new Set(courses.map(c => c.category || 'Others'))];
 
-  // Filtered list
+  
   const filteredCourses =
     selectedCategory === 'All'
       ? courses
@@ -42,13 +42,13 @@ const AllCourse = () => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold text-gray-800">All Courses</h1>
         <p className="text-gray-500 mt-2">Explore and filter through available courses</p>
       </div>
 
-      {/* Filter Buttons */}
+      
       <div className="flex flex-wrap justify-center gap-3 mb-10">
         {categories.map(category => (
           <button
@@ -65,7 +65,7 @@ const AllCourse = () => {
         ))}
       </div>
 
-      {/* Courses Grid */}
+     
       {filteredCourses.length === 0 ? (
         <p className="text-center text-gray-500">No courses found in this category.</p>
       ) : (
