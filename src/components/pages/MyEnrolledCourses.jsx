@@ -22,11 +22,11 @@ const MyEnrolledCourses = () => {
         <p>No enrolled courses yet.</p>
       ) : (
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {enrolled.map((c) => (
-            <div key={c._id} className="bg-white rounded-xl shadow-md p-4">
-              <img src={c.imageURL} alt={c.title} className="rounded-lg h-40 w-full object-cover mb-3" />
-              <h3 className="font-medium text-gray-800">{c.title}</h3>
-              <p className="text-sm text-gray-500 mt-1">{c.instructor}</p>
+          {enrolled.map((course) => (
+            <div key={course._id} className="bg-white rounded-xl shadow-md p-4">
+              <img src={course.imageURL || course.image } alt={course.title} className="rounded-lg h-40 w-full object-cover mb-3" />
+              <h3 className="font-medium text-gray-800">{course.title}</h3>
+              <p className="text-sm text-gray-500 mt-1">{course.instructor}</p>
             </div>
           ))}
         </div>

@@ -50,17 +50,18 @@ const MyCourse = () => {
           {courses.map((course) => (
             <div
               key={course._id}
-              className="border rounded-lg p-4 shadow-md bg-white"
+              className="border rounded-lg  shadow-md bg-white"
             >
               <img
                 src={course.image || course.imageURL}
                 alt={course.title}
                 className="h-40 w-full object-cover rounded-md mb-3"
               />
+              <div className="px-4">
               <h3 className="text-lg font-semibold">{course.title}</h3>
               <p className="text-gray-500 mb-3">${course.price}</p>
-
-              <div className="flex justify-between items-center">
+              </div>
+              <div className="flex justify-between items-center p-4">
                 <Link
                   to={`/courseDetails/${course._id}`}
                   className="text-blue-600 hover:underline text-sm font-medium"

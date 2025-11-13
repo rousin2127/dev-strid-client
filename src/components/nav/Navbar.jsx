@@ -64,7 +64,7 @@ const Navbar = () => {
             <li tabIndex={0}>
                 <details ref={dashboardRef}>
                     <summary>Dashboard</summary>
-                    <ul className="p-2 bg-base-100 rounded-t-none z-50">
+                    <ul className="p-2 bg-base-100 w-[150px] rounded-t-none z-50">
                         <li>
                             <NavLink
                                 to="/addCourse"
