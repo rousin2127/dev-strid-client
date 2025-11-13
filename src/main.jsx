@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allCourses',
-        Component: AllCourse
+        element: <PrivateRout><AllCourse></AllCourse></PrivateRout>
       },
       {
         path:'/courseDetails/:id',
@@ -56,15 +56,15 @@ const router = createBrowserRouter([
       },
       {
         path:'/myCourse',
-        element: <MyCourse></MyCourse>
+        element: <PrivateRout><MyCourse></MyCourse></PrivateRout>
       },
       {
         path: '/myEnrolledCourse',
-        element: <MyEnrolledCourses></MyEnrolledCourses>
+        element: <PrivateRout><MyEnrolledCourses></MyEnrolledCourses></PrivateRout>
       },
       {
         path: '/addCourse',
-        element: <AddCourse></AddCourse>
+        element: <PrivateRout><AddCourse></AddCourse></PrivateRout>
       },
       {
         path: '/updateCourse/:id',
