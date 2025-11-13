@@ -31,7 +31,7 @@ const CourseDetails = () => {
       setEnrolling(true);
       const res = await axios.post("http://localhost:3000/enrollments", enrollmentData);
       if (res.data.insertedId) {
-        alert("Successfully enrolled! 🎉");
+        toast("Successfully enrolled! 🎉");
       } else {
         toast("You're already enrolled in this course!");
       }
@@ -52,7 +52,7 @@ const CourseDetails = () => {
         className="bg-white shadow-md rounded-2xl overflow-hidden"
       >
         <img
-          src={course.imageURL || "https://via.placeholder.com/800x400?text=Course+Image"}
+          src={course.imageURL || course.image}
           alt={course.title}
           className="w-full h-80 object-cover"
         />

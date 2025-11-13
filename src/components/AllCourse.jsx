@@ -79,7 +79,7 @@ const AllCourse = () => {
               className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
             >
               <img
-                src={course.imageURL || 'https://via.placeholder.com/400x250?text=No+Image'}
+                src={course.imageURL || course.image}
                 alt={course.title}
                 className="w-full h-48 object-cover"
               />

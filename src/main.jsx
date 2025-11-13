@@ -15,6 +15,7 @@ import MyCourse from './components/pages/MyCourse'
 import MyEnrolledCourses from './components/pages/MyEnrolledCourses'
 import AddCourse from './components/pages/AddCourse'
 import UpdateCourse from './components/pages/UpdateCourse'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -72,6 +73,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
+      <Toaster />
     </AuthProvider>
   </StrictMode>,
 )
