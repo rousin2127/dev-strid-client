@@ -16,6 +16,7 @@ import MyEnrolledCourses from './components/pages/MyEnrolledCourses'
 import AddCourse from './components/pages/AddCourse'
 import UpdateCourse from './components/pages/UpdateCourse'
 import { Toaster } from 'react-hot-toast'
+import PrivateRout from './components/PrivateRout'
 
 
 
@@ -47,7 +48,11 @@ const router = createBrowserRouter([
       {
         path:'/courseDetails/:id',
         loader: ({params}) => fetch(`http://localhost:3000/courses/${params.id}`),
-        Component: CourseDetails
+        element: (
+            <PrivateRout>
+                <CourseDetails /> 
+            </PrivateRout>
+        )
       },
       {
         path:'/myCourse',
