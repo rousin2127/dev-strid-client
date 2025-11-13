@@ -17,6 +17,7 @@ import AddCourse from './components/pages/AddCourse'
 import UpdateCourse from './components/pages/UpdateCourse'
 import { Toaster } from 'react-hot-toast'
 import PrivateRout from './components/PrivateRout'
+import Error from './components/pages/Error'
 
 
 
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: '/updateCourse/:id',
         element: <UpdateCourse></UpdateCourse>
+      },
+      {
+        path: '*',
+        Component: Error
       }
     ]
   }
