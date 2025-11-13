@@ -112,7 +112,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">DevStride</a>
+                <Link to={'/'} className="btn btn-ghost text-xl">DevStride</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -147,7 +147,7 @@ const Navbar = () => {
                         <>
                             {/* profile tooltip */}
                             <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'No Name'}>
-                                <Link to="/profile">
+                                <Link to="/">
                                     {user.photoURL ? (
                                         <img
                                             src={user.photoURL || photoURL}
