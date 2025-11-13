@@ -40,7 +40,7 @@ const AddCourse = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:3000/courses", courseData);
+      const res = await axios.post("https://dev-stride-server.vercel.app/courses", courseData);
       if (res.data.insertedId) {
         toast.success("Course added successfully!");
         setFormData({

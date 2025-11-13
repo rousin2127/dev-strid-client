@@ -12,7 +12,7 @@ const AllCourse = () => {
   // fetch course from db
   useEffect(() => {
     setLoading(true);
-    axios.get('http://localhost:3000/courses')
+    axios.get('https://dev-stride-server.vercel.app/courses')
       .then(res => {
         setCourses(res.data);
         setLoading(false);

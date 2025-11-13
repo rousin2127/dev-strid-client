@@ -9,7 +9,7 @@ const MyEnrolledCourses = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:3000/enrollments?email=${user.email}`)
+        .get(`https://dev-stride-server.vercel.app/enrollments?email=${user.email}`)
         .then((res) => setEnrolled(res.data))
         .catch((err) => console.error(err));
     }

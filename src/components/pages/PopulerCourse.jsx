@@ -6,7 +6,7 @@ const PopulerCourse = () => {
   const [loading, setLoading] = useState(true); // loading state
 
   useEffect(() => {
-    fetch('http://localhost:3000/popularCourses')
+    fetch('https://dev-stride-server.vercel.app/popularCourses')
       .then(res => res.json())
       .then(data => {
         setCourses(data);

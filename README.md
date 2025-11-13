@@ -1,6 +1,6 @@
 # DevStride
 
-**Live Site:** ...............
+**Live Site:** (https://dev-stride-89da6.web.app/)
 
 ## Features
 - Fully responsive and mobile-friendly design  

@@ -29,7 +29,7 @@ const CourseDetails = () => {
 
     try {
       setEnrolling(true);
-      const res = await axios.post("http://localhost:3000/enrollments", enrollmentData);
+      const res = await axios.post("https://dev-stride-server.vercel.app/enrollments", enrollmentData);
       if (res.data.insertedId) {
         toast("Successfully enrolled! 🎉");
       } else {

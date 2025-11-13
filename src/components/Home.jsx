@@ -4,7 +4,7 @@ import Hero from './section/Hero';
 import ChooseUs from './section/ChoseUs';
 import Instructor from './section/Instructor';
 
-const popularCoursePromise = fetch('http://localhost:3000/popularCourses').
+const popularCoursePromise = fetch('https://dev-stride-server.vercel.app/popularCourses').
 then(res => res.json())
 
 const Home = () => {

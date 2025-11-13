@@ -62,7 +62,7 @@ const Signup = () => {
                             image: photo 
                         }
 
-                        fetch('http://localhost:3000/users', {
+                        fetch('https://dev-stride-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -101,7 +101,7 @@ const Signup = () => {
                     email: result.user.email,
                     image:result.user.photoURL
                 }
-                fetch('http://localhost:3000/users',{
+                fetch('https://dev-stride-server.vercel.app/users',{
                     method:'POST',
                     headers:{
                         'content-type':'application/json'

@@ -98,6 +98,7 @@ const Navbar = () => {
         </>
     );
 
+    //sticky top-0 z-50
 
     return (
         <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
@@ -147,7 +148,7 @@ const Navbar = () => {
                         <>
                             {/* profile tooltip */}
                             <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'No Name'}>
-                                <Link to="/">
+                                <Link to={'/'} >
                                     {user.photoURL ? (
                                         <img
                                             src={user.photoURL || photoURL}

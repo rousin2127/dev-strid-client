@@ -18,7 +18,7 @@ const UpdateCourse = () => {
 
   // load exist course
   useEffect(() => {
-    axios.get(`http://localhost:3000/courses/${id}`)
+    axios.get(`https://dev-stride-server.vercel.app/courses/${id}`)
       .then((res) => setCourse(res.data))
       .catch((err) => console.error(err));
   }, [id]);
@@ -32,7 +32,7 @@ const UpdateCourse = () => {
     delete updateCourse._id;
 
     try {
-      const res = await axios.patch(`http://localhost:3000/courses/${id}`, updateCourse);
+      const res = await axios.patch(`https://dev-stride-server.vercel.app/courses/${id}`, updateCourse);
       if (res.data.modifiedCount > 0) {
         toast.success("Course updated successfully!");
         navigate("/myCourse");
