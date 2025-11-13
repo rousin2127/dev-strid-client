@@ -27,7 +27,7 @@ const PopulerCourse = () => {
   }
 
   return (
-        <div className="max-w-5xl mx-auto px-4 py-12 ">
+        <div className="max-w-6xl mx-auto px-4 py-12 ">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold text-gray-800">Popular Course</h1>
         {/* <p className="text-gray-500 mt-2">Explore and filter through available courses</p> */}
