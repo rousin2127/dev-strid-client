@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import useAuth from "../hooks/useAuth";
 
 const AddCourse = () => {
-  const { user } = useAuth(); // ✅ Make sure this hook returns {user}
+  const { user } = useAuth(); 
   const [formData, setFormData] = useState({
     title: "",
     image: "",

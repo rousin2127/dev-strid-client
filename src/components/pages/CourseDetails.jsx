@@ -8,7 +8,7 @@ import useAuth from "../hooks/useAuth";
 
 const CourseDetails = () => {
   const course = useLoaderData();
-  const { user } = useAuth(); // current logged-in user
+  const { user } = useAuth(); 
   const [enrolling, setEnrolling] = useState(false);
 
   const handleEnroll = async () => {
@@ -44,7 +44,7 @@ const CourseDetails = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
+    <div className="max-w-2xl mx-auto px-4 py-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

@@ -2,35 +2,35 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Instructor = () => {
-    // Data for instructors (you would likely fetch this from an API in a real app)
+    
     const instructors = [
         {
             name: "John Smith",
             title: "Web Development Lead",
-            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", // Replace with actual image URL
+            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", 
             bio: "John is a seasoned developer with 10+ years of experience in full-stack web development. He's passionate about teaching React and Node.js."
         },
         {
             name: "Jane Doe",
             title: "Data Science Expert",
-            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", // Replace with actual image URL
+            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", 
             bio: "Jane specializes in machine learning and data analysis. Her courses focus on practical applications of Python and R."
         },
         {
             name: "Michael Brown",
             title: "UI/UX Designer",
-            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", // Replace with actual image URL
+            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", 
             bio: "Michael brings creativity and user-centric design principles to life. He teaches Figma, Adobe XD, and design thinking."
         },
         {
             name: "Sarah Lee",
             title: "Digital Marketing Strategist",
-            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", // Replace with actual image URL
+            image: "https://i.ibb.co.com/ccz3Rrz9/person.webp", 
             bio: "Sarah helps businesses grow their online presence with effective digital marketing strategies across various platforms."
         }
     ];
 
-    // Animation variants for the section container
+   
     const sectionVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
@@ -45,7 +45,6 @@ const Instructor = () => {
         },
     };
 
-    // Animation variants for each instructor card
     const cardVariants = {
         hidden: { opacity: 0, scale: 0.9 },
         visible: {
@@ -61,16 +60,17 @@ const Instructor = () => {
 
     return (
         <motion.section
-            className="py-16 bg-gray-100"
+            className="py-16 "
             variants={sectionVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }} // Animate when 30% of the section is in view
+            viewport={{ once: true, amount: 0.3 }} 
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                {/* Section Title */}
+
+                {/* section Title */}
                 <motion.h2
-                    className="text-3xl font-extrabold text-gray-900 mb-12"
+                    className="text-3xl font-extrabold  mb-12"
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.8 }}
@@ -79,15 +79,15 @@ const Instructor = () => {
                     Meet Our Top Instructors
                 </motion.h2>
 
-                {/* Instructors Grid */}
+                {/* instructors Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {instructors.map((instructor, index) => (
                         <motion.div
                             key={index}
                             className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                             variants={cardVariants}
-                            whileHover={{ scale: 1.03 }} // Slight scale effect on hover
-                            whileTap={{ scale: 0.98 }}   // Slight shrink effect on tap/click
+                            whileHover={{ scale: 1.03 }} 
+                            whileTap={{ scale: 0.98 }}   
                         >
                             <img
                                 src={instructor.image}

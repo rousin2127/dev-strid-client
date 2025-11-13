@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router';
 
 const Footer = () => {
-    // You can define the social media links here
+   
     const socialLinks = [
         { icon: FaFacebookF, link: "#" },
         { icon: FaXTwitter, link: "#" },
@@ -12,31 +12,31 @@ const Footer = () => {
         { icon: FaLinkedinIn, link: "#" },
     ];
     
-    // Get the current year for the copyright
+    
     const currentYear = new Date().getFullYear();
 
     return (
         <footer className="bg-white border-t border-gray-200 py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                {/* Footer Content Wrapper */}
+               
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     
-                    {/* Left Section: Logo and Tagline */}
+                    
                     <div className="text-center md:text-left">
-                        {/* 💡 Note: Replace with your actual logo component or image */}
+                        
                         <div className="flex items-center justify-center md:justify-start">
-                            <span className="text-xl font-bold text-blue-600">SkillVerse</span>
+                            <span className="text-xl font-bold text-blue-600">DevStride</span>
                         </div>
                         <p className="text-gray-500 text-sm mt-1">Empowering Minds Together.</p>
                     </div>
 
-                    {/* Center Section: Copyright */}
+                   
                     <p className="text-gray-500 text-sm">
-                        © {currentYear} SkillVerse. All rights reserved.
+                        © {currentYear} DevStride. All rights reserved.
                     </p>
 
-                    {/* Right Section: Social Media Icons */}
+                   
                     <div className="flex space-x-4">
                         {socialLinks.map((item, index) => (
                             <Link 

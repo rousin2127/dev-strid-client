@@ -14,16 +14,16 @@ const Hero = () => {
         },
     };
 
-    // 2. Animation Variants for the text and buttons (children)
+    
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
     };
 
     return (
-        // Hero Section Container - Animated with Framer Motion
+        
         <motion.section
-            className="bg-blue-500 text-white py-7 lg:pt-24 lg:pb-32" // Using Tailwind CSS for the blue background and padding
+            className="bg-blue-500 text-white py-7 lg:pt-24 lg:pb-32" 
             variants={containerVariants}
             initial="hidden"
             animate="visible"

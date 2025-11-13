@@ -9,7 +9,7 @@ const ForgotPass = () => {
   const location = useLocation();
   const [email, setEmail] = useState('');
 
-  // ✅ If the login page sent an email via navigate state, set it here
+  
   useEffect(() => {
     if (location.state?.email) {
       setEmail(location.state.email);

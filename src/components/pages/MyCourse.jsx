@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import useAuth from "../hooks/useAuth";
 
 const MyCourse = () => {
-  const { user } = useAuth(); // ✅ FIXED
+  const { user } = useAuth(); 
   const [courses, setCourses] = useState([]);
 
   const fetchCourses = async () => {

@@ -16,14 +16,14 @@ const UpdateCourse = () => {
     isFeatured: false,
   });
 
-  // Load existing course data
+  // load exist course
   useEffect(() => {
     axios.get(`http://localhost:3000/courses/${id}`)
       .then((res) => setCourse(res.data))
       .catch((err) => console.error(err));
   }, [id]);
 
-  // Update handler
+  // update handler
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -45,7 +45,7 @@ const UpdateCourse = () => {
     }
   };
 
-  // Controlled input handler
+  //  input handler
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setCourse({
